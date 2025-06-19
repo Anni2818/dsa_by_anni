@@ -30,7 +30,7 @@ public:
 //more optimised
 //here we consider the shortet window and gradually chaeck for the repeating char
 // if we have repeating char then erase it from the set untill the leftmost is unique
-
+// this is inspired from the neetcode yt channel
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
