@@ -28,3 +28,25 @@ public:
 
 //sliding window approach
 //more optimised
+//here we consider the shortet window and gradually chaeck for the repeating char
+// if we have repeating char then erase it from the set untill the leftmost is unique
+
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        set<char>st;
+        int l=0,maxlen=0;
+
+        for(int i=0;i<s.size();i++)
+        {
+            while(st.find(s[i]) != st.end())
+            {
+                st.erase(s[l]);
+                l++;
+            }
+            st.insert(s[i]);
+            maxlen = max(maxlen,i-l+1);
+        }
+        return maxlen;
+    }
+};
