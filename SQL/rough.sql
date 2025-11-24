@@ -50,3 +50,13 @@ select * from student;
 -- generally the practice is to give the column names before the from keyword and at the end of the query as well
 -- eg. => select dep,name from worker group by dep,name; 
 -- when aggregation applied the table is rearranged then further processing is done.
+
+
+-- ################ IMPORTANT #########
+-- MAX(salary) is an aggregate function, but you are trying to use it inside the WHERE clause.
+-- SQL doesn’t allow that, because WHERE is applied before grouping/aggregation.
+
+-- HAVING :
+-- it is used for filtering like where, but only when group by is used 
+
+-- where vs having :
